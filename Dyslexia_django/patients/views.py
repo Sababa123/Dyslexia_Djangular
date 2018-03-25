@@ -90,7 +90,6 @@ def patients_createform(request):
 		#p_name = request.POST.get("p_name")
 		#p_dob = request.POST.get("p_dob")
 		#form = PatientCreateForm(request.POST)
-                #abcd
 	if form.is_valid():
 		if request.user.is_authenticated:
 			instance = form.save(commit=False)
