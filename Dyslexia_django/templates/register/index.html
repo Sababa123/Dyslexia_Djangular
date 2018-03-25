@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="{% static "register/app.js" %}"></script>
+</head>
+{% verbatim %}  
+<body ng-app="MyApp">
+    
+<div ng-controller="registerController">
+    
+    <form>
+        <h2>Register Form</h2>
+        <div>
+            <label>First Name</label>
+            <input type="text" ng-model="fn" required="required"/>
+        </div>
+        
+        <div>
+            <label>Last Name</label>
+            <input type="text" ng-model="ln" required="required"/>
+        </div>
+        
+        <div>
+            <label>Age</label>
+            <input type="text" ng-model="age"/>
+        </div>
+        
+        <div>
+            <label>DOB</label>
+            <input type="text" ng-model="dob"/>
+        </div>
+
+        <div>
+            <label>School</label>
+            <input type="text" ng-model="s"/>
+        </div>
+
+        <div>
+            <label>Grade</label>
+            <input type="text" ng-model="g"/>
+        </div>
+
+        <div>
+            <label>Password</label>
+            <input type="text" ng-model="pwd"/>
+        </div>
+
+        <div>
+            <label>Email</label>
+            <input type="text" ng-model="email"/>
+        </div>
+
+        
+        <button ng-click="Register()">Register</button>
+         
+    </form>
+    
+   <!-- <table>
+       <tr>
+           <th>User Id</th>
+           <th>ID</th>
+           <th>Title</th>
+           <th>Body</th>
+       </tr>
+    
+       <tr ng-repeat="data in usersData">
+           <td>{{data.userId}}</td>
+           <td>{{data.id}}</td>
+           <td>{{data.title}}</td>
+           <td>{{data.body}}</td>
+       </tr> 
+   </table> -->
+</div>
+
+</body> 
+{% endverbatim %}  
+</html>

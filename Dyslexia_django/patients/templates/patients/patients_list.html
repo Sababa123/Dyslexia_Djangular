@@ -1,0 +1,27 @@
+{% extends "patientsHTML/base.html" %}
+
+
+{%  block head_title %}  Patients || {{block.super}} {%  endblock head_title %} 
+{% block content %}
+
+<form class='form' method='GET' action='.'>
+    <input type='text' placeholder="Search.." name='q' value='{{ request.GET.q }}'>
+    <button class='btn btn-default' type='submit'>Search</button>
+</form>
+
+<h1> Patients List</h1>
+<a href = " {% url 'Patient:create_form'  %}">  <h1> Add Patient </h1> </a>
+
+
+
+
+<ul>
+{% for obj in obj_list %}
+
+
+<li> {{obj.first_name}} || {{obj.last_name}} </li>
+
+{% endfor %}
+</ul>
+
+{% endblock %}

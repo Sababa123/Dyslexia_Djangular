@@ -1,0 +1,18 @@
+{% extends "patientsHTML/base.html" %}
+
+
+{%  block head_title %}  Patients || {{block.super}} {%  endblock head_title %} 
+{% block content %}
+<h1> Patients List</h1>
+
+
+
+<ul>
+{% for obj in names_list %}
+
+<a href = " {% url 'Patient:patients_detail' obj.patient_ID %}"> <h1>{{obj.first_name}} </h1> </a>
+
+{% endfor %}
+</ul>
+
+{% endblock %}

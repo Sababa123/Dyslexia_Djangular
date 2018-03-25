@@ -1,0 +1,22 @@
+{% extends "patientsHTML/base.html" %}
+
+
+{%  block head_title %}  Add Patient || {{block.super}} {%  endblock head_title %} 
+{% block content %}
+<h1> Add Patient </h1>
+
+<form method="POST">
+    {% csrf_token %}
+
+
+{{ form.as_p }}
+<button type = 'submit'>Save </button> 
+
+</form>
+
+
+{% endblock %}
+
+
+<!-- <input type="text", name="p_name" , placeholder="Your name" > </br> </br> </br> 
+<input type="date", name="p_dob" , placeholder="Your Date of Birth"> </br> </br> </br> -->

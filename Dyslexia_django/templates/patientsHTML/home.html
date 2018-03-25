@@ -1,0 +1,14 @@
+
+{% extends "patientsHTML/base.html" %}
+
+{% block content%}
+
+<h1>  Hello buddy how {{id}} are you?</h1>
+{% if id == "hi" %}
+<h2> {{num}} </h2>
+{% endif %}
+{% for item in all_list %}
+<h2> the num is {{item}}</h2>
+{% endfor %}
+
+{% endblock content %}

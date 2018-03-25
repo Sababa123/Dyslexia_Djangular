@@ -1,0 +1,21 @@
+{% extends "patientsHTML/base.html" %}
+
+
+{%  block head_title %}  Questions || {{block.super}} {%  endblock head_title %} 
+{% block content %}
+<h1> Question List</h1>
+<a href = " {% url 'Question:q_create'  %}">  <h1> Add Question </h1> </a>
+
+
+
+<ul>
+{% for obj in obj_list %}
+
+
+<h3><strong>{{obj.ques}} </strong></h3>
+<li> {{obj.ans1}} || {{obj.ans2}} </li>
+
+{% endfor %}
+</ul>
+
+{% endblock %}
